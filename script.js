@@ -34,4 +34,6 @@ function ajustarEstiloDeExibicao() {
 }
 
 // Chama a função ao carregar a página e quando a largura da janela é redimensionada
-window.onload = window.onresize = ajustarEstiloDeExibicao;
+audio.addEventListener('click', () => {
+    window.onload = window.onresize = ajustarEstiloDeExibicao;
+})
