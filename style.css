@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    background-color: black;
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #9a2afd;
+    border-radius: 15px;
+}
+
+body {
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+}
+
+header > a > img {
+    width: 250px;
+    animation: float 2s infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translatey(10px);
+    }
+    50% {
+        transform: translatey(0px);
+    }
+    100% {
+        transform: translatey(10px);
+    }
+}
+
+main {
+    width: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    gap: 50px;
+}
+
+.card {
+    width: 200px;
+    height: 300px;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    border-radius: 8px;
+    border: 1px solid #9a2afd;
+    transition: 0.3s linear;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.card > img {
+    width: 100px;
+    border-radius: 50%;
+    border: 3px solid #9a2afd;
+    padding: 5px;
+}
+.card > h1 {
+    font-size: 20pt;
+    color: #9a2afd;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+span {
+    color: white;
+    font-weight: bolder;
+}
+
+
+.audio {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+input[type = button] {
+    padding: 20px;
+    width: 250px;
+    background-color: transparent;
+    border: 1px solid #9a2afd;
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #9a2afd;
+    font-size: 20pt;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+input[type = button]:hover {
+    transform: scale(1.1);
+
+}
+@media screen and (width < 768px) {
+    main {
+       display: grid;
+    }
+
+    .card {
+        padding: 10px;
+    }
+}
